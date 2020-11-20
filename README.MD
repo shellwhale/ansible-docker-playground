@@ -6,7 +6,7 @@ Start the containers by running the following snippet in your terminal :
 
 ```bash
 git clone https://github.com/shellwhale/ansible-docker-playground
-cd https://github.com/shellwhale/ansible-docker-playground
+cd ansible-docker-playground
 docker-compose build
 docker-compose up
 ```
