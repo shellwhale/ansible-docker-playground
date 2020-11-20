@@ -3,7 +3,6 @@ services:
   ansible:
     image: shellwhale/ansible
     hostname: ansible
-    stdin_open: true
     tty: true
     volumes:
       - ./shared-folder:/shared-folder
