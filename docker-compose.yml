@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  ansible:
+    image: shellwhale/ansible
+    hostname: ansible
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./shared-folder:/shared-folder
+    build:
+      context: .
+      dockerfile: Dockerfile.ansible
+  web:
+    hostname: web
+    image: shellwhale/centos
+    build:
+      context: .
+      dockerfile: Dockerfile.centos
+  db:
+    hostname: db
+    image: shellwhale/centos
+    build:
+      context: .
+      dockerfile: Dockerfile.centos
+      

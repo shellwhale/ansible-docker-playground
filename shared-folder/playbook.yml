@@ -1,0 +1,8 @@
+---
+- name: Quelques tâches ...
+  hosts: localhost
+  tasks:
+    - name: Install tree
+      apt:
+        name: tree
+        state: latest
