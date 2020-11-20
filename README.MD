@@ -7,8 +7,8 @@ Start the containers by running the following snippet in your terminal :
 ```bash
 git clone https://github.com/shellwhale/ansible-docker-playground
 cd ansible-docker-playground
-docker-compose build
-docker-compose up
+docker-compose build # Build the containers
+docker-compose up # Start the containers
 ```
 The containers ansible, web and db are now running the background
 
@@ -26,4 +26,11 @@ cd /root
 
 ```bash
 ssh -i id_rsa web
+```
+
+---
+
+If you do any change to the Dockerfiles, don't forget to build the containers again
+```bash
+docker-compose build
 ```
