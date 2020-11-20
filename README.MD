@@ -12,5 +12,5 @@ docker-compose up
 In a second terminal, run this second snippet to access the ansible-enabled container
 
 ```bash
-docker attach ansible-docker-playground_ansible_1
+docker exec -it ansible-docker-playground_ansible_1 /bin/bash
 ```
