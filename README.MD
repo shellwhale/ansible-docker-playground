@@ -1,4 +1,6 @@
 # ansible-docker-playground
+A simple 3 containers ansible playground
+![project image]https://i.imgur.com/jwf0hv9.png)
 
 Start the containers by running the following snippet in your terminal :
 
