@@ -6,6 +6,7 @@ RUN apt-add-repository --yes --update ppa:ansible/ansible
 RUN apt-get install -y ansible iputils-ping python-apt
 
 ADD id_rsa /root
+RUN cp /root/id_rsa /root/.ssh
 RUN chmod 400 /root/id_rsa
 
 ENTRYPOINT [ "/bin/bash" ]
