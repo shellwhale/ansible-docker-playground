@@ -11,7 +11,6 @@ docker-compose build
 docker-compose up
 ```
 The containers ansible, web and db are now running the background
----
 
 ⚠ In a second terminal, run this second snippet to access the ansible-enabled container (named as "ansible" within the network) 
 
