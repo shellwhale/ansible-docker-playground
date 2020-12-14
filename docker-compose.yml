@@ -11,6 +11,8 @@ services:
       dockerfile: Dockerfile.ansible
   web:
     hostname: web
+    ports:
+      - "999:999"
     image: shellwhale/centos
     build:
       context: .
