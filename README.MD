@@ -21,11 +21,13 @@ docker exec -it ansible-docker-playground_ansible_1 /bin/bash
 Then you can try to ssh into the others containers (such as web or db) with the following snippets
 
 ```bash
-cd /root
+ssh web
 ```
 
+You can add/modify playbooks inside the shared-folder of this repository, it's a volume that's mounted at /shared-folder in the ansible container. This folder should be your workplace, place your inventory, templates etc in it and run your playbooks from it.
 ```bash
-ssh -i id_rsa web
+cd /shared-folder
+ansible-playbook playbook.yml -i inventory.ini
 ```
 
 ---
