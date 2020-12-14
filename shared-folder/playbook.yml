@@ -1,8 +1,36 @@
----
-- name: Quelques tâches ...
-  hosts: localhost
+- hosts: webservers
+  vars:
+      http_port: 999
+      server_name: "web"
+      message: "Hello world"
   tasks:
-    - name: Install tree
-      apt:
-        name: tree
-        state: latest
+    - name: Install httpd
+      package:
+        name: httpd
+        state: present
+
+    - name: Start the httpd server
+      shell: /usr/sbin/httpd
+
+    - name: Template a file to /etc/file.conf
+      template:
+        src: templates/httpd.conf.j2
+        dest: /etc/httpd/conf/httpd.conf
+      notify:
+        - Restart the httpd server
+
+    - name: Add the index.html
+      template:
+        src: templates/index.html.j2
+        dest: /usr/share/httpd/noindex/index.html
+
+  handlers:
+    - name: Restart the httpd server
+      shell: pkill httpd && /usr/sbin/httpd
+
+- hosts: dbservers
+  tasks:
+    - name: Install mariadb-server
+      yum:
+        name: mariadb-server
+        state: present
