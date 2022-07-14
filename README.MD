@@ -2,7 +2,7 @@
 A simple 3 containers ansible playground
 ![project image](https://i.imgur.com/jwf0hv9.png)
 
-This repository contains a minimal set of files in order to quickly setup an environment for learning experimenting with Ansible. 
+This repository contains a minimal set of files in order to quickly setup an environment for learning and experimenting with Ansible. 
 You can use the `docker-compose.yml` file to tweak the infrastructure to your needs.
 
 Start the containers by running the following snippet in your terminal :
